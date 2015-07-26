@@ -2,7 +2,7 @@
 var searchForm = document.querySelector('#searchform');
 var sfbg = document.querySelector(".sfbg.nojsv");
 
-window.addEventListener.('load', function() {
+window.addEventListener('load', function() {
 	sfbg.style.opacity = "0.5";
 })
 
