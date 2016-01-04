@@ -1,14 +1,21 @@
 //Googleの検索フォームを、画面のスクロールトップに追従させる。	
-var searchForm = document.querySelector('#searchform');
-var sfbg = document.querySelector(".sfbg.nojsv");
+var url = location.href
 
-window.addEventListener('load', function() {
+if(url.indexOf("google") != -1) {
+	var Sticky = {};
+
+	var searchForm = document.querySelector('#searchform');
+	var sfbg = document.querySelector(".sfbg.nojsv");
 	sfbg.style.opacity = "0.5";
-})
 
-window.addEventListener('scroll', function() {
-	var body = document.body.scrollTop;
-	searchForm.style.top = body + 15 + "px";
-})
+	var sticky = function(dom, option) {
+		var bodyScrollTop = document.body.scrollTop;
+		dom.style.top = bodyScrollTop + option + "px";
+	}
+
+	window.addEventListener('scroll', function() {
+		sticky(searchForm, 15);
+	});
+}
 
 
