@@ -2,7 +2,7 @@
   "name": "GoogleSearchFormStickyHeader",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Google Search Form modified Sticky Header",
+  "description": "My Utility JavaScripts.",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
@@ -10,7 +10,7 @@
   "content_scripts":[
     {
       "matches" : ["http://*/*", "https://*/*"],
-      "js" : ["scripts/googleSeachStickyHeader.js", "scripts/keydown-shortcut.js", "scripts/cuttom-youtube.js"]
+      "js" : ["scripts/googleSeachStickyHeader.js", "scripts/keydown-shortcut.js"]
     }
   ]
 }
