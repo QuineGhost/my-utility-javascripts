@@ -15,14 +15,15 @@ if(currentUrl.indexOf("google") != -1) {
   DOMList[1] = searchOption;
 
 	window.addEventListener('scroll', function() {
-		execStickyHeader(DOMList, 15);
+		execStickyHeader(DOMList[0], 15);
+    execStickyHeader(DOMList[1], 15);
 	});
 }
 
 //スティッキーヘッダーメソッド
-var execStickyHeader = function(domList, option) {
+var execStickyHeader = function(dom, option) {
   var bodyScrollTop = document.body.scrollTop;
-  for(dom of domList) {
+  // for(dom of domList) {
     dom.style.top = bodyScrollTop + option + "px";
-  }
+  // }
 }
