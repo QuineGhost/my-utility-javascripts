@@ -14,7 +14,7 @@ document.onkeydown = function(e){
 		  		window.open('http://twitter.com/intent/tweet?text='
 		  			+ encodeURIComponent(title)
 		  			+'%20'
-					+'&url='
+						+'&url='
 	  				+ encodeURIComponent(window.location.href));
 		  	};
 	  		break;
@@ -26,5 +26,3 @@ document.onkeydown = function(e){
 	    	break;
 	}
 }
-
-
