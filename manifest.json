@@ -1,5 +1,5 @@
 {
-  "name": "My Utility JavaScripts.",
+  "name": "Fast Google Search",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "My Utility JavaScripts.",
@@ -7,10 +7,13 @@
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "content_scripts":[
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
     {
-      "matches" : ["http://*/*", "https://*/*", "*://*/*"],
-      "js" : ["scripts/googleSeachStickyHeader.js", "scripts/keydown-shortcut.js"]
+      "matches": ["http://*/*", "https://*/*", "*://*/*"],
+      "js": ["main.js"]
     }
   ]
 }
